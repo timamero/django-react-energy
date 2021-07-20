@@ -1,0 +1,8 @@
+# Django
+__pycache__/
+venv/
+secrets.py
+.zip
+
+# React
+node_modules/

@@ -1,0 +1,260 @@
+﻿id,region,category,classification,subclassification,total_number_of_housing_units,total_energy_consumption,energy_consumption_per_household,energy_consumption_per_household_member,energy_consumption_per_square_foot,total_energy_expenditures,energy_expenditure_per_household,energy_expenditure_per_household_member,energy_expenditure_per_square_foot
+1,Northeast,All homes,,,21,1984,94.4,38.1,45.2,47.66,2269,915,1.09
+2,Northeast,Census division,New England,,5.6,547,97.3,40.3,44.5,14.31,2541,1054,1.16
+3,Northeast,Census division,Middle Atlantic,,15.4,1436,93.4,37.3,45.5,33.36,2169,866,1.06
+4,Northeast,Census urban/rural classification,Urban,,17.7,1652,93.1,37.5,47.4,39.11,2203,889,1.12
+5,Northeast,Census urban/rural classification,Urban,Urbanized area,15.6,1465,93.9,37,47.7,34.66,2223,876,1.13
+6,Northeast,Census urban/rural classification,Urban,Urban cluster,2.2,187,86.8,42.1,45.1,4.44,2063,1002,1.07
+7,Northeast,Census urban/rural classification,Rural,,3.3,332,102,41,36.6,8.55,2626,1056,0.94
+8,Northeast,Metropolitan or micropolitan statistical area,In metropolitan statistical area,,18.4,1750,95,37.5,45.8,41.7,2264,894,1.09
+9,Northeast,Metropolitan or micropolitan statistical area,In micropolitan statistical area,,Q,Q,93.3,43.6,38.3,Q,2369,1106,0.97
+10,Northeast,Metropolitan or micropolitan statistical area,Not in metropolitan or micropolitan statistical area,,Q,Q,86.2,41.3,45.5,Q,2215,1061,1.17
+11,Northeast,Climate region,Very cold/Cold,,13.9,1383,99.3,40.6,43.1,31.76,2282,932,0.99
+12,Northeast,Climate region,Mixed-humid,,7.1,601,84.9,33.3,50.9,15.9,2244,881,1.35
+13,Northeast,Climate region,Mixed-dry/Hot-dry,,N,N,N,N,N,N,N,N,N
+14,Northeast,Climate region,Hot-humid,,N,N,N,N,N,N,N,N,N
+15,Northeast,Climate region,Marine,,N,N,N,N,N,N,N,N,N
+16,Northeast,Housing unit type,Single-family detached,,10.8,1356,125.5,45.9,42.2,31.19,2887,1056,0.97
+17,Northeast,Housing unit type,Single-family attached,,1.9,174,93.2,37.4,45.4,3.76,2013,807,0.98
+18,Northeast,Housing unit type,Apartments in buildings with 2–4 units,,3.2,222,70.2,26.6,63.6,5.51,1743,660,1.58
+19,Northeast,Housing unit type,Apartments in buildings with 5 or more units,,4.7,192,41,22.7,49.1,6.22,1327,736,1.59
+20,Northeast,Housing unit type,Mobile homes,,0.5,40,81.2,35,71.6,0.99,2022,870,1.78
+21,Northeast,Ownership of housing unit,Owned,,12.9,1478,114.6,44.2,42.6,34.74,2693,1039,1
+22,Northeast,Ownership of housing unit,Owned,Single-family,11.1,1354,121.5,45.9,41.5,31.46,2824,1068,0.96
+23,Northeast,Ownership of housing unit,Owned,Apartments,1.4,90,66.5,28.9,56.8,2.44,1797,781,1.54
+24,Northeast,Ownership of housing unit,Owned,Mobile homes,0.4,34,85.4,40.4,71.4,0.84,2080,984,1.74
+25,Northeast,Ownership of housing unit,Rented,,8.1,505,62.3,27.1,54.8,12.93,1594,692,1.4
+26,Northeast,Ownership of housing unit,Rented,Single-family,1.5,176,115.2,37.4,52.9,3.48,2275,739,1.04
+27,Northeast,Ownership of housing unit,Rented,Apartments,6.5,324,49.9,23.7,55.7,9.29,1431,679,1.6
+28,Northeast,Ownership of housing unit,Rented,Mobile homes,Q,Q,Q,Q,Q,Q,Q,Q,Q
+29,Northeast,Year of construction,Before 1950,,7.3,679,93,37.5,48.1,15.63,2141,863,1.11
+30,Northeast,Year of construction,1950 to 1959,,3,321,108.8,44,50.4,7.2,2440,987,1.13
+31,Northeast,Year of construction,1960 to 1969,,2.4,246,100.9,44.7,48.1,5.87,2406,1067,1.15
+32,Northeast,Year of construction,1970 to 1979,,2.5,209,83.9,35.1,42.8,5.37,2151,901,1.1
+33,Northeast,Year of construction,1980 to 1989,,2.1,162,77,31.9,41.4,4.56,2174,900,1.17
+34,Northeast,Year of construction,1990 to 1999,,1.7,181,106.1,39.2,41.1,4.24,2489,920,0.96
+35,Northeast,Year of construction,2000 to 2009,,1.6,161,98.3,34.4,37.2,4.12,2519,882,0.95
+36,Northeast,Year of construction,2010 to 2015,,0.4,25,66.2,28.4,31.4,0.67,1756,752,0.83
+37,Northeast,Total square footage,"Fewer than 1,000",,5.5,241,44.1,24.1,60.7,7.34,1343,732,1.85
+38,Northeast,Total square footage,"1,000 to 1,499",,3.7,271,73.3,28.5,60.2,6.74,1822,708,1.5
+39,Northeast,Total square footage,"1,500 to 1,999",,1.9,192,103.9,43.8,59.1,4.55,2454,1035,1.4
+40,Northeast,Total square footage,"2,000 to 2,499",,2.4,251,104.9,38.3,47.8,6.05,2525,922,1.15
+41,Northeast,Total square footage,"2,500 to 2,999",,2.5,302,118.8,43.4,44.1,6.74,2652,970,0.98
+42,Northeast,Total square footage,"3,000 or greater",,5.1,726,143.7,49.5,36.2,16.25,3217,1107,0.81
+43,Northeast,Number of household members,1 member,,5.5,328,59.5,59.5,39.9,8.36,1518,1518,1.02
+44,Northeast,Number of household members,2 members,,7.4,676,92,46,42.7,16.46,2239,1120,1.04
+45,Northeast,Number of household members,3 members,,3.7,401,108.5,36.2,47.8,9.38,2541,847,1.12
+46,Northeast,Number of household members,4 members,,2.5,321,129,32.2,50.6,7.53,3029,757,1.19
+47,Northeast,Number of household members,5 members,,1.2,153,125.3,25.1,49.6,3.42,2801,560,1.11
+48,Northeast,Number of household members,6 or more members,,0.7,105,141.2,22.1,50.7,2.5,3360,525,1.21
+49,Northeast,2015 annual household income,"Less than $20,000",,4.2,306,72.3,35.6,54.6,7.22,1709,841,1.29
+50,Northeast,2015 annual household income,"$20,000 to $39,999",,4.3,378,87.7,35.9,47.4,8.66,2012,824,1.09
+51,Northeast,2015 annual household income,"$40,000 to $59,999",,2.9,259,89.6,37.5,44.8,6.26,2166,907,1.08
+52,Northeast,2015 annual household income,"$60,000 to $79,999",,2.8,259,91.1,36.6,38.9,6.78,2387,959,1.02
+53,Northeast,2015 annual household income,"$80,000 to $99,999",,1.6,165,102.4,36.9,41.2,3.79,2348,846,0.94
+54,Northeast,2015 annual household income,"$100,000 to $119,999",,1.6,181,115.1,43.1,41.8,4.28,2722,1019,0.99
+55,Northeast,2015 annual household income,"$120,000 to $139,999",,1.2,142,117.2,41.2,49.7,3.32,2730,960,1.16
+56,Northeast,2015 annual household income,"$140,000 or more",,2.3,294,125.6,42.6,43.9,7.34,3140,1065,1.1
+57,Northeast,Payment method for energy bills,All paid by household,,16.3,1741,106.8,40.8,44,40.62,2492,951,1.03
+58,Northeast,Payment method for energy bills,"Some paid by household, some included in rent or condo fee",,2.7,141,51.8,26.4,55.6,4.04,1489,759,1.6
+59,Northeast,Payment method for energy bills,All included in rent or condo fee,,1.9,90,48.7,24.8,58.3,2.77,1494,762,1.79
+60,Northeast,Payment method for energy bills,Some other method,,Q,Q,Q,Q,Q,Q,Q,Q,Q
+61,Northeast,Main heating fuel,Natural gas,,11.4,1170,102.6,40.3,49.7,23.66,2075,816,1.01
+62,Northeast,Main heating fuel,Electricity,,2.8,120,43.1,19.4,29.8,4.97,1780,801,1.23
+63,Northeast,Main heating fuel,Fuel oil/kerosene,,4.8,538,113.1,44.9,48.7,14.13,2971,1178,1.28
+64,Northeast,Main heating fuel,Propane,,0.9,84,97.2,44.7,38.3,2.64,3042,1398,1.2
+65,Midwest,All homes,,,26.4,2486,94.3,37.8,41.4,46.42,1760,706,0.77
+66,Midwest,Census division,East North Central,,18.1,1755,97,38.1,43.1,31.88,1762,693,0.78
+67,Midwest,Census division,West North Central,,8.3,731,88.3,37,37.8,14.54,1757,737,0.75
+68,Midwest,Census urban/rural classification,Urban,,20.7,1946,93.8,38.2,42.7,34.11,1644,670,0.75
+69,Midwest,Census urban/rural classification,Urban,Urbanized area,17.2,1631,94.9,39.1,42.7,28.01,1629,671,0.73
+70,Midwest,Census urban/rural classification,Urban,Urban cluster,3.5,314,88.5,34.3,42.5,6.1,1718,666,0.83
+71,Midwest,Census urban/rural classification,Rural,,5.6,540,96.1,36.4,37.2,12.31,2189,830,0.85
+72,Midwest,Metropolitan or micropolitan statistical area,In metropolitan statistical area,,21.3,2034,95.6,38.4,41.3,36.65,1723,692,0.74
+73,Midwest,Metropolitan or micropolitan statistical area,In micropolitan statistical area,,3.3,297,88.8,34.2,42.6,6.2,1855,714,0.89
+74,Midwest,Metropolitan or micropolitan statistical area,Not in metropolitan or micropolitan statistical area,,1.8,155,88.2,37.4,40.2,3.57,2026,860,0.92
+75,Midwest,Climate region,Very cold/Cold,,21.2,2019,95.2,38.2,42.3,35.94,1695,681,0.75
+76,Midwest,Climate region,Mixed-humid,,5.2,467,90.4,36,37.9,10.48,2028,808,0.85
+77,Midwest,Climate region,Mixed-dry/Hot-dry,,N,N,N,N,N,N,N,N,N
+78,Midwest,Climate region,Hot-humid,,N,N,N,N,N,N,N,N,N
+79,Midwest,Climate region,Marine,,N,N,N,N,N,N,N,N,N
+80,Midwest,Housing unit type,Single-family detached,,18.2,2048,112.8,41.8,40.2,36.86,2030,752,0.72
+81,Midwest,Housing unit type,Single-family attached,,1.3,110,85.8,40.8,44.1,1.94,1513,721,0.78
+82,Midwest,Housing unit type,Apartments in buildings with 2–4 units,,2,110,55.9,26.5,54.2,2.3,1175,558,1.14
+83,Midwest,Housing unit type,Apartments in buildings with 5 or more units,,4,147,36.8,19.9,42.5,3.6,903,490,1.04
+84,Midwest,Housing unit type,Mobile homes,,1,72,73.4,28.2,65.3,1.72,1752,673,1.56
+85,Midwest,Ownership of housing unit,Owned,,17.8,1944,109.5,43.5,40.1,35.49,1999,795,0.73
+86,Midwest,Ownership of housing unit,Owned,Single-family,16.4,1852,112.7,44.3,39.4,33.49,2038,801,0.71
+87,Midwest,Ownership of housing unit,Owned,Apartments,0.6,35,61.7,34.5,54.6,0.73,1292,721,1.14
+88,Midwest,Ownership of housing unit,Owned,Mobile homes,0.8,56,74.5,30.4,67.3,1.27,1685,688,1.52
+89,Midwest,Ownership of housing unit,Rented,,8.6,542,62.9,25.7,46.9,10.93,1268,518,0.94
+90,Midwest,Ownership of housing unit,Rented,Single-family,3,305,101.5,30.8,47.2,5.31,1764,535,0.82
+91,Midwest,Ownership of housing unit,Rented,Apartments,5.4,221,41.1,21.1,45.8,5.18,961,494,1.07
+92,Midwest,Ownership of housing unit,Rented,Mobile homes,Q,Q,Q,Q,Q,Q,Q,Q,Q
+93,Midwest,Year of construction,Before 1950,,6.2,653,104.9,40.4,45.5,11.48,1845,711,0.8
+94,Midwest,Year of construction,1950 to 1959,,3.3,326,99.7,39.5,49.9,5.52,1686,668,0.84
+95,Midwest,Year of construction,1960 to 1969,,3,257,86.2,39,41,4.75,1589,719,0.76
+96,Midwest,Year of construction,1970 to 1979,,4,353,89.2,36.8,44.7,6.8,1716,707,0.86
+97,Midwest,Year of construction,1980 to 1989,,2.7,229,85.1,38.5,37.4,4.58,1701,769,0.75
+98,Midwest,Year of construction,1990 to 1999,,3.5,332,95.2,36.2,38.6,6.54,1878,714,0.76
+99,Midwest,Year of construction,2000 to 2009,,3.1,287,91.8,34.6,33.4,5.64,1806,681,0.66
+100,Midwest,Year of construction,2010 to 2015,,0.6,48,77.1,27.9,28.6,1.11,1774,643,0.66
+101,Midwest,Total square footage,"Fewer than 1,000",,5.1,239,46.5,25.1,61.1,5.29,1028,556,1.35
+102,Midwest,Total square footage,"1,000 to 1,499",,4,273,67.4,29.7,54.6,5.78,1430,631,1.16
+103,Midwest,Total square footage,"1,500 to 1,999",,3.4,338,98.4,38.6,56.1,6.48,1889,742,1.08
+104,Midwest,Total square footage,"2,000 to 2,499",,3.7,397,107.6,41.4,47.9,7.03,1905,733,0.85
+105,Midwest,Total square footage,"2,500 to 2,999",,3.1,340,109.2,41.1,39.8,6.09,1958,738,0.71
+106,Midwest,Total square footage,"3,000 or greater",,6.9,899,129.5,43.9,31.8,15.75,2266,769,0.56
+107,Midwest,Number of household members,1 member,,6.9,485,70.8,70.8,42.4,8.8,1283,1283,0.77
+108,Midwest,Number of household members,2 members,,9.7,912,93.9,46.9,39.9,17.44,1794,897,0.76
+109,Midwest,Number of household members,3 members,,3.9,415,105.3,35.1,42.9,7.53,1914,638,0.78
+110,Midwest,Number of household members,4 members,,3.4,382,111.9,28,40.8,7.01,2054,514,0.75
+111,Midwest,Number of household members,5 members,,1.5,174,116.2,23.2,42.8,3.48,2325,465,0.86
+112,Midwest,Number of household members,6 or more members,,1,118,123.8,18.1,44.7,2.17,2273,332,0.82
+113,Midwest,2015 annual household income,"Less than $20,000",,4.6,307,67.2,31.9,46.6,6.02,1320,627,0.91
+114,Midwest,2015 annual household income,"$20,000 to $39,999",,6.6,558,84.7,39.5,44.5,10.34,1571,733,0.82
+115,Midwest,2015 annual household income,"$40,000 to $59,999",,4.2,374,88.7,38.1,40.6,7.06,1675,719,0.77
+116,Midwest,2015 annual household income,"$60,000 to $79,999",,3.9,390,99.3,37.6,40.8,7.36,1872,708,0.77
+117,Midwest,2015 annual household income,"$80,000 to $99,999",,2.3,247,105.4,37.4,41.1,4.68,1996,707,0.78
+118,Midwest,2015 annual household income,"$100,000 to $119,999",,1.6,182,113.9,34.2,34.9,3.52,2205,661,0.68
+119,Midwest,2015 annual household income,"$120,000 to $139,999",,1.2,156,124.8,40.6,39.6,2.86,2294,746,0.73
+120,Midwest,2015 annual household income,"$140,000 or more",,1.9,273,143.8,45.1,38.8,4.58,2418,758,0.65
+121,Midwest,Payment method for energy bills,All paid by household,,24,2364,98.6,38.8,41.1,44.09,1840,724,0.77
+122,Midwest,Payment method for energy bills,"Some paid by household, some included in rent or condo fee",,1.5,70,47.2,25.3,50.6,1.36,910,487,0.98
+123,Midwest,Payment method for energy bills,All included in rent or condo fee,,0.7,40,55.1,22.9,46.7,0.77,1050,435,0.89
+124,Midwest,Payment method for energy bills,Some other method,,Q,Q,Q,Q,Q,Q,Q,Q,Q
+125,Midwest,Main heating fuel,Natural gas,,18.7,2020,108,42.8,44.4,32.93,1761,697,0.72
+126,Midwest,Main heating fuel,Electricity,,5.4,261,48.1,21.5,29.5,8.2,1509,674,0.93
+127,Midwest,Main heating fuel,Fuel oil/kerosene,,Q,Q,Q,Q,Q,Q,Q,Q,Q
+128,Midwest,Main heating fuel,Propane,,1.5,157,102.6,37.1,38.4,4.03,2629,950,0.99
+129,South,All homes,,,44.4,3064,68.9,27.3,35.6,85.19,1917,758,0.99
+130,South,Census division,South Atlantic,,23.5,1584,67.5,27,33.8,46.09,1963,787,0.98
+131,South,Census division,East South Central,,7.2,498,69.2,27.5,37,13.72,1907,757,1.02
+132,South,Census division,West South Central,,13.8,981,71.3,27.6,38.1,25.38,1843,713,0.98
+133,South,Census urban/rural classification,Urban,,33.4,2267,67.8,27.2,36.1,61.43,1838,738,0.98
+134,South,Census urban/rural classification,Urban,Urbanized area,28.1,1930,68.8,27.2,36.1,52.76,1880,743,0.99
+135,South,Census urban/rural classification,Urban,Urban cluster,5.4,336,62.9,27.6,36.3,8.67,1621,711,0.94
+136,South,Census urban/rural classification,Rural,,11,797,72.3,27.4,34,23.76,2155,817,1.01
+137,South,Metropolitan or micropolitan statistical area,In metropolitan statistical area,,34.7,2391,68.9,27.1,35.1,66.58,1919,755,0.98
+138,South,Metropolitan or micropolitan statistical area,In micropolitan statistical area,,6.3,432,68.6,29,36.7,11.62,1845,781,0.99
+139,South,Metropolitan or micropolitan statistical area,Not in metropolitan or micropolitan statistical area,,3.4,240,69.9,26,38.7,6.99,2030,756,1.13
+140,South,Climate region,Very cold/Cold,,Q,Q,92,42.7,49.7,Q,1740,809,0.94
+141,South,Climate region,Mixed-humid,,21.3,1636,77,29.7,36.1,43.54,2048,791,0.96
+142,South,Climate region,Mixed-dry/Hot-dry,,N,N,N,N,N,N,N,N,N
+143,South,Climate region,Hot-humid,,22.4,1352,60.5,24.4,34.4,40.22,1799,725,1.02
+144,South,Climate region,Marine,,N,N,N,N,N,N,N,N,N
+145,South,Housing unit type,Single-family detached,,28.7,2373,82.7,30.8,34.8,63.82,2224,828,0.93
+146,South,Housing unit type,Single-family attached,,2.3,129,56.5,23,34.3,3.57,1567,638,0.95
+147,South,Housing unit type,Apartments in buildings with 2–4 units,,2.4,101,42.1,20.4,42.8,2.86,1187,575,1.21
+148,South,Housing unit type,Apartments in buildings with 5 or more units,,7.2,244,34,17,35.3,7.88,1098,549,1.14
+149,South,Housing unit type,Mobile homes,,3.9,216,55.6,20.9,44.5,7.06,1818,683,1.45
+150,South,Ownership of housing unit,Owned,,28.5,2295,80.6,31.1,34.8,62.13,2182,841,0.94
+151,South,Ownership of housing unit,Owned,Single-family,24.8,2099,84.8,32.3,34.3,55.86,2257,859,0.91
+152,South,Ownership of housing unit,Owned,Apartments,0.8,33,39.4,22.7,32.4,0.97,1161,669,0.96
+153,South,Ownership of housing unit,Owned,Mobile homes,2.9,163,56.5,21.9,43.9,5.3,1840,713,1.43
+154,South,Ownership of housing unit,Rented,,16,769,48.1,20,38.1,23.06,1444,600,1.14
+155,South,Ownership of housing unit,Rented,Single-family,6.2,403,64.8,22.8,37.4,11.53,1854,653,1.07
+156,South,Ownership of housing unit,Rented,Apartments,8.7,312,35.7,17.5,37.8,9.77,1117,546,1.18
+157,South,Ownership of housing unit,Rented,Mobile homes,1,53,53.3,18.4,46.4,1.76,1756,607,1.53
+158,South,Year of construction,Before 1950,,3.9,299,76.8,34.1,41.8,7.22,1856,823,1.01
+159,South,Year of construction,1950 to 1959,,3.6,259,71.2,29.5,40.1,6.94,1904,789,1.07
+160,South,Year of construction,1960 to 1969,,4.5,308,68.8,30.3,36.9,8.03,1795,792,0.96
+161,South,Year of construction,1970 to 1979,,7.2,470,65.4,26.6,38.1,13.38,1861,757,1.09
+162,South,Year of construction,1980 to 1989,,7.3,473,64.5,27,35,13.75,1876,786,1.02
+163,South,Year of construction,1990 to 1999,,7.7,538,69.7,26.2,34.5,15.18,1967,741,0.97
+164,South,Year of construction,2000 to 2009,,8.2,585,71.6,25.4,32.6,16.97,2076,736,0.95
+165,South,Year of construction,2010 to 2015,,2,132,65.2,22.4,27.1,3.72,1836,632,0.76
+166,South,Total square footage,"Fewer than 1,000",,8.5,340,39.8,19.6,51.5,10.36,1213,598,1.57
+167,South,Total square footage,"1,000 to 1,499",,12.2,670,54.8,21.8,44.9,20.13,1647,656,1.35
+168,South,Total square footage,"1,500 to 1,999",,8.2,573,69.5,28.2,39.8,16.01,1942,788,1.11
+169,South,Total square footage,"2,000 to 2,499",,4.9,391,79.8,27.9,35.7,10.59,2165,757,0.97
+170,South,Total square footage,"2,500 to 2,999",,3.3,307,93.7,35.5,34.2,8,2439,923,0.89
+171,South,Total square footage,"3,000 or greater",,7.3,783,107.8,36.8,25.8,20.09,2768,943,0.66
+172,South,Number of household members,1 member,,10.9,526,48.3,48.3,32.5,14.68,1349,1349,0.91
+173,South,Number of household members,2 members,,15.9,1074,67.3,33.7,33.7,30.28,1899,949,0.95
+174,South,Number of household members,3 members,,7.5,572,76.8,25.6,37.7,15.73,2111,704,1.04
+175,South,Number of household members,4 members,,6,526,87.3,21.8,38,14.36,2381,595,1.04
+176,South,Number of household members,5 members,,2.7,237,87.5,17.5,41,6.53,2413,483,1.13
+177,South,Number of household members,6 or more members,,1.4,128,90.3,13.5,38.7,3.59,2530,378,1.09
+178,South,2015 annual household income,"Less than $20,000",,9.1,469,51.4,22.9,38,13.5,1480,661,1.09
+179,South,2015 annual household income,"$20,000 to $39,999",,11.1,651,58.6,25.4,37.4,18.64,1678,725,1.07
+180,South,2015 annual household income,"$40,000 to $59,999",,7.7,521,67.7,27.1,37.1,14.46,1881,752,1.03
+181,South,2015 annual household income,"$60,000 to $79,999",,5,341,68.6,24.8,33.4,9.86,1986,718,0.97
+182,South,2015 annual household income,"$80,000 to $99,999",,3.3,256,76.8,29.5,34.5,7.13,2137,821,0.96
+183,South,2015 annual household income,"$100,000 to $119,999",,2.6,215,81.3,28,33.1,5.88,2224,768,0.9
+184,South,2015 annual household income,"$120,000 to $139,999",,1.7,159,92.9,29.8,31.8,4.41,2570,826,0.88
+185,South,2015 annual household income,"$140,000 or more",,3.9,452,116.8,39.1,34.1,11.32,2925,979,0.85
+186,South,Payment method for energy bills,All paid by household,,41.8,2953,70.7,27.6,35.4,82.05,1964,767,0.98
+187,South,Payment method for energy bills,"Some paid by household, some included in rent or condo fee",,0.8,37,45,23.8,38.4,1.08,1303,689,1.11
+188,South,Payment method for energy bills,All included in rent or condo fee,,1.5,56,38,19,38,1.56,1051,525,1.05
+189,South,Payment method for energy bills,Some other method,,0.4,17,47.1,21,44.8,0.5,1378,615,1.31
+190,South,Main heating fuel,Natural gas,,13.7,1318,96.3,37.7,42,28.94,2116,827,0.92
+191,South,Main heating fuel,Electricity,,24.9,1354,54.5,21.5,31.2,44.65,1796,708,1.03
+192,South,Main heating fuel,Fuel oil/kerosene,,0.8,82,99.4,37,43.2,2.16,2621,975,1.14
+193,South,Main heating fuel,Propane,,1.9,173,93,37,37.7,4.85,2612,1038,1.06
+194,West,All homes,,,26.4,1581,59.9,22.3,33.4,40.06,1518,565,0.85
+195,West,Census division,Mountain,,8.5,631,74.1,28.7,36.9,13.94,1638,634,0.82
+196,West,Census division,Mountain,Mountain North,4.2,357,84,31.4,38.7,6.74,1586,593,0.73
+197,West,Census division,Mountain,Mountain South,4.3,274,64.3,25.8,34.9,7.2,1688,678,0.92
+198,West,Census division,Pacific,,17.9,949,53.1,19.4,31.5,26.12,1461,534,0.87
+199,West,Census urban/rural classification,Urban,,22.8,1317,57.7,21.3,33,33.32,1459,539,0.84
+200,West,Census urban/rural classification,Urban,Urbanized area,21.4,1213,56.7,21,32.5,31.14,1457,540,0.83
+201,West,Census urban/rural classification,Urban,Urban cluster,1.5,104,71.4,24.9,41.8,2.19,1497,523,0.88
+202,West,Census urban/rural classification,Rural,,3.6,264,74.3,29.1,35.6,6.74,1898,743,0.91
+203,West,Metropolitan or micropolitan statistical area,In metropolitan statistical area,,24.1,1403,58.1,21.5,32.8,36.41,1508,559,0.85
+204,West,Metropolitan or micropolitan statistical area,In micropolitan statistical area,,1.1,78,68.4,25.7,33.8,1.45,1276,480,0.63
+205,West,Metropolitan or micropolitan statistical area,Not in metropolitan or micropolitan statistical area,,1.1,100,90.4,36.6,46.6,2.21,1995,808,1.03
+206,West,Climate region,Very cold/Cold,,6.5,528,80.6,30.5,39.6,10.47,1600,605,0.79
+207,West,Climate region,Mixed-humid,,N,N,N,N,N,N,N,N,N
+208,West,Climate region,Mixed-dry/Hot-dry,,12.7,660,51.8,19.3,31.1,18.89,1484,552,0.89
+209,West,Climate region,Hot-humid,,0.4,11,24.1,11.4,25,0.84,1883,889,1.95
+210,West,Climate region,Marine,,6.7,382,57.3,20.8,31.1,9.86,1479,536,0.8
+211,West,Housing unit type,Single-family detached,,16.2,1213,74.8,26.2,32.6,29.78,1837,644,0.8
+212,West,Housing unit type,Single-family attached,,1.6,78,49.3,18.6,33,1.97,1240,466,0.83
+213,West,Housing unit type,Apartments in buildings with 2–4 units,,1.9,70,37.6,13.9,41.3,1.81,972,358,1.07
+214,West,Housing unit type,Apartments in buildings with 5 or more units,,5.3,141,26.6,12.2,32.2,4.4,831,380,1
+215,West,Housing unit type,Mobile homes,,1.4,78,54.6,20.6,48.4,2.11,1471,555,1.3
+216,West,Ownership of housing unit,Owned,,15.4,1108,72,27,32,27.54,1790,671,0.79
+217,West,Ownership of housing unit,Owned,Single-family,13.9,1041,75,27.5,31.5,25.4,1829,671,0.77
+218,West,Ownership of housing unit,Owned,Apartments,0.6,16,28.8,16.7,27.7,0.78,1358,786,1.31
+219,West,Ownership of housing unit,Owned,Mobile homes,0.9,50,54.3,22.8,47.1,1.37,1474,620,1.28
+220,West,Ownership of housing unit,Rented,,11,473,43,15.8,37.5,12.52,1138,419,0.99
+221,West,Ownership of housing unit,Rented,Single-family,3.9,250,64,19.8,38.1,6.35,1623,502,0.97
+222,West,Ownership of housing unit,Rented,Apartments,6.6,194,29.5,12.4,35.5,5.43,825,347,0.99
+223,West,Ownership of housing unit,Rented,Mobile homes,0.5,28,55.3,17.6,50.8,0.74,1465,466,1.35
+224,West,Year of construction,Before 1950,,3.4,211,62.9,24.1,34.1,5.14,1533,586,0.83
+225,West,Year of construction,1950 to 1959,,2.8,160,57.9,24.4,37.9,3.86,1394,587,0.91
+226,West,Year of construction,1960 to 1969,,2.9,149,51.3,19.3,34.9,3.84,1321,497,0.9
+227,West,Year of construction,1970 to 1979,,4.7,257,54.8,19.8,35.4,6.81,1453,524,0.94
+228,West,Year of construction,1980 to 1989,,3.9,189,48.5,18.8,32.6,5.1,1307,505,0.88
+229,West,Year of construction,1990 to 1999,,3.9,267,68.3,24.2,32.7,6.61,1690,599,0.81
+230,West,Year of construction,2000 to 2009,,4.1,295,72.8,25.8,30.4,7.48,1842,653,0.77
+231,West,Year of construction,2010 to 2015,,0.8,51,64,22.8,31.3,1.22,1532,545,0.75
+232,West,Total square footage,"Fewer than 1,000",,7.4,251,33.8,14.7,46.2,6.93,934,405,1.27
+233,West,Total square footage,"1,000 to 1,499",,6.2,329,53.2,19.4,43.3,8.36,1353,493,1.1
+234,West,Total square footage,"1,500 to 1,999",,3.9,256,64.9,22.8,37.5,6.5,1645,578,0.95
+235,West,Total square footage,"2,000 to 2,499",,3.1,229,73,26.4,32.7,5.79,1848,669,0.83
+236,West,Total square footage,"2,500 to 2,999",,1.9,162,86.7,32.4,31.7,3.81,2044,764,0.75
+237,West,Total square footage,"3,000 or greater",,3.8,354,92.2,29.6,23.1,8.67,2259,725,0.57
+238,West,Number of household members,1 member,,5.5,251,45.7,45.7,33,6.06,1102,1102,0.8
+239,West,Number of household members,2 members,,9.7,567,58.5,29.2,32.2,14.77,1524,762,0.84
+240,West,Number of household members,3 members,,4.3,255,58.9,19.6,32.2,6.37,1469,490,0.8
+241,West,Number of household members,4 members,,3.6,244,68.1,17,34.4,6.37,1779,445,0.9
+242,West,Number of household members,5 members,,1.8,134,76.1,15.2,37.1,3.37,1911,382,0.93
+243,West,Number of household members,6 or more members,,1.5,129,85.4,13.1,37.8,3.12,2059,316,0.91
+244,West,2015 annual household income,"Less than $20,000",,5,222,44.9,19,39.2,5.73,1157,490,1.01
+245,West,2015 annual household income,"$20,000 to $39,999",,5.3,295,55.5,21.1,35.3,6.84,1290,490,0.82
+246,West,2015 annual household income,"$40,000 to $59,999",,3.6,201,55.6,21.5,33.5,4.95,1370,530,0.83
+247,West,2015 annual household income,"$60,000 to $79,999",,3.5,229,65.4,23.9,34.9,5.55,1589,582,0.85
+248,West,2015 annual household income,"$80,000 to $99,999",,2.4,158,66.4,24.3,34,3.9,1634,599,0.84
+249,West,2015 annual household income,"$100,000 to $119,999",,2.3,156,67.7,22.8,28.8,4.06,1765,595,0.75
+250,West,2015 annual household income,"$120,000 to $139,999",,1.2,95,75.8,25.3,30.9,2.41,1932,646,0.79
+251,West,2015 annual household income,"$140,000 or more",,3.1,225,73.1,24.3,29.6,6.61,2144,714,0.87
+252,West,Payment method for energy bills,All paid by household,,23.7,1482,62.4,22.8,33.1,37.05,1561,571,0.83
+253,West,Payment method for energy bills,"Some paid by household, some included in rent or condo fee",,1.1,35,32.8,13.6,35.8,0.96,905,374,0.99
+254,West,Payment method for energy bills,All included in rent or condo fee,,1.4,54,38.5,18.7,40.6,1.83,1291,627,1.36
+255,West,Payment method for energy bills,Some other method,,0.2,10,57.1,19.5,43.5,0.22,1331,456,1.01
+256,West,Main heating fuel,Natural gas,,13.9,1010,72.7,26.7,36.5,22.6,1627,598,0.82
+257,West,Main heating fuel,Electricity,,7.8,361,46,17.7,29.3,10.61,1352,521,0.86
+258,West,Main heating fuel,Fuel oil/kerosene,,Q,Q,Q,Q,Q,Q,Q,Q,Q
+259,West,Main heating fuel,Propane,,0.8,54,71.3,32.9,32.6,1.73,2303,1064,1.05
