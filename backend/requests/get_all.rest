@@ -1,1 +1,17 @@
 GET http://127.0.0.1:8000/energydata
+
+###
+
+GET http://127.0.0.1:8000/energydata/west
+
+###
+
+GET http://127.0.0.1:8000/energydata/northeast
+
+###
+
+GET http://127.0.0.1:8000/energydata/midwest
+
+###
+
+GET http://127.0.0.1:8000/energydata/south
