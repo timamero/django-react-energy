@@ -1,8 +1,11 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 import './App.css';
+import ResultTabs from './components/ResultTabs';
+import theme from './theme/theme'
+import { useStyles } from './styles/styles'
 
-import { createTheme, ThemeProvider, makeStyles } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container'
@@ -10,50 +13,6 @@ import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import { FormControl, FormLabel, InputLabel, Input, RadioGroup, Radio, FormControlLabel, FormHelperText } from '@material-ui/core';
 
-
-// Material-UI Theme customization
-const theme = createTheme({
-  typography: {
-    h1: {
-      fontSize: 40,
-      padding: "16px",
-    },
-    h2: {
-      fontSize: 24,
-      padding: "16px",
-    },
-  },
-});
-
-// Material-UI Styles
-const useStyles = makeStyles({
-    centerText: {
-      textAlign: 'center'
-    },
-    alignItemsAndJustifyContent: {
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
-    alignItemsAndJustifyContentCol: {
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
-    redText: {
-      color: 'red'
-    },
-    greenText: {
-      color: 'green'
-    },
-  })
-
-// Style for the displayed calculated difference in consumption/expenditure
-const numberStyle = {
-    fontWeight: 600,
-    fontSize: '1.2rem'
-}
 
 const App = () => {
   const classes = useStyles()
@@ -106,10 +65,8 @@ const App = () => {
     
     // console.log('getting')
     axios
-      .get(`http://127.0.0.1:8000/energydata?region=${regionValue}`)
+      .get(`http://127.0.0.1:8000/energydata/${regionValue}`)
       .then(response => {
-        // console.log('got response')
-        // console.log(response.data)
         setRegionData(response.data)
         setShowForm('none')
         setShowResults('block')
@@ -135,7 +92,6 @@ const App = () => {
   function calculateDifference(consumed, data) {
     return (consumed - data).toFixed(2)
   }
-  
   
   // console.log('rendered app')
   
@@ -176,32 +132,13 @@ const App = () => {
               </Grid>
             </form>    
           </Box>
-
-          {differenceInConsumption 
-            ?
-            <Box className={classes.alignItemsAndJustifyContentCol} display={showResults}>
-              <Typography variant="h2" theme={theme} align="center">Comparison against all homes in the {region} </Typography>
-              <Typography align="center">
-                You used {' '}
-                  <span
-                    style={numberStyle}
-                    className={differenceInConsumption > 0 ? classes.redText : classes.greenText}
-                  >
-                    {Math.abs(differenceInConsumption)}kWh
-                  </span>
-                  {' '} {differenceInConsumption > 0 ? `more` : `less`} than the average.
-              </Typography>
-              <Typography align="center">The average energy consumption was {energyConsumptionPerHouseHold}kWh.</Typography>
-              <Box m={2}>
-                <Button onClick={handleReset} variant="outlined">
-                    Go Back
-              </Button>
-              </Box>
-              
-            </Box>
-            : null
-          }
-
+          
+          <ResultTabs 
+            showResults={showResults} 
+            handleReset={handleReset}
+            differenceInConsumption={differenceInConsumption}
+            energyConsumptionPerHouseHold={energyConsumptionPerHouseHold}
+          />
         </Container>
       </ThemeProvider>
     </div>
