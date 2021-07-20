@@ -1,0 +1,10 @@
+GET http://127.0.0.1:8000/energydata/1
+
+###
+
+GET http://127.0.0.1:8000/energydata/10
+
+###
+
+# Test for failure
+GET http://127.0.0.1:8000/energydata/500
