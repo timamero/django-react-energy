@@ -11,7 +11,8 @@ import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
-import { FormControl, FormLabel, InputLabel, Input, RadioGroup, Radio, FormControlLabel, FormHelperText } from '@material-ui/core';
+import { FormControl, FormLabel, FormGroup, InputLabel, Input, RadioGroup, Radio, FormControlLabel, FormHelperText } from '@material-ui/core';
+import Switch from '@material-ui/core/Switch';
 
 
 const App = () => {
@@ -28,27 +29,55 @@ const App = () => {
   const [regionData, setRegionData] = useState([])
   const [category, setCategory] = useState('All homes')
 
-  const [consumptionAmount, setConsumptionAmount] = useState('')
-  const [energyConsumptionPerHouseHold, setEnergyConsumptionPerHousehold] = useState(null)
-  const [differenceInConsumption, setDifferenceInConsumption] = useState(null)
+  const [inputAmount, setinputAmount] = useState('')
+  const [energyPerHouseHold, setEnergyPerHouseHold] = useState(null)
+  const [difference, setDifference] = useState(null)
 
+  const [classification, setClassification] = useState(null)
+  const [subclassification, setSubclassification] = useState(null)
+  const [selection, setSelection] = useState('')
+  const [tabValue, setTabValue] = React.useState(0);
+
+  const [isCompareConsumption, setIsCompareConsumption] = useState(true)
+  
   useEffect(() => {
     if (regionData.length === 0) {
       return
     }
 
     const categoryData = regionData.filter(data => data.category === category)
-    // console.log(categoryData)
     if (category === 'All homes') {
-      setDifferenceInConsumption(calculateDifference(consumptionAmount,convertDataEnergy(categoryData[0].energy_consumption_per_household)))
-      setEnergyConsumptionPerHousehold((convertDataEnergy(categoryData[0].energy_consumption_per_household)))
+      if (isCompareConsumption) {
+        setDifference(calculateDifference(inputAmount,convertDataEnergy(categoryData[0].energy_consumption_per_household)))
+        setEnergyPerHouseHold((convertDataEnergy(categoryData[0].energy_consumption_per_household)))
+      } else {
+        setDifference(calculateDifference(inputAmount, categoryData[0].energy_expenditure_per_household))
+        setEnergyPerHouseHold(categoryData[0].energy_expenditure_per_household)
+      }
+
+    } else {
+      setClassification(categoryData.map(data => {
+        return {"id": data.id, "name": data.classification}
+        })
+      )
+      setSubclassification(categoryData.map(data => data.subclassification))
+      
+      if (selection) {
+        if (isCompareConsumption) {
+          setDifference(calculateDifference(inputAmount,convertDataEnergy(categoryData.find(item => item.id === Number(selection)).energy_consumption_per_household)))
+          setEnergyPerHouseHold((convertDataEnergy(categoryData.find(item => item.id === Number(selection)).energy_consumption_per_household)))
+        } else {
+          setDifference(calculateDifference(inputAmount,categoryData.find(item => item.id === Number(selection)).energy_expenditure_per_household))
+          setEnergyPerHouseHold((categoryData.find(item => item.id === Number(selection)).energy_expenditure_per_household))
+        }
+        
+      }   
     }
   
-  }, [regionData, category, consumptionAmount])
+  }, [regionData, category, inputAmount, tabValue, selection])
 
-  const handleConsumptionAmountChange = (event) => {
-    // console.log('handleConsumption', event.target.value)
-    setConsumptionAmount(event.target.value)
+  const handleinputAmountChange = (event) => {
+    setinputAmount(event.target.value)
   }
 
   const handleRegionChange = (event) => {
@@ -56,14 +85,18 @@ const App = () => {
     setRegionHelperText(`You selected ${event.target.value}`)
   }
 
+  const handleCategoryChange = (event) => {
+    setCategory(event.target.textContent)
+    setSelection('')
+  }
+
+  const handleSelectionChange = (event) => {
+    setSelection(event.target.value)
+  }
+
   const handleSubmit = (event) => {
     event.preventDefault()
-    // console.log('submitted')
-
-    // console.log(event.target.elements.region.value)
     const regionValue = event.target.elements.region.value
-    
-    // console.log('getting')
     axios
       .get(`http://127.0.0.1:8000/energydata/${regionValue}`)
       .then(response => {
@@ -73,15 +106,30 @@ const App = () => {
       })
   }
 
+  const handleTabChange = (event, newTabValue) => {
+    console.log('tab', event.target.value)
+    setTabValue(newTabValue);
+  };
+
+  const handleCompareConsumptionChange = () => {
+    setIsCompareConsumption(!isCompareConsumption)
+    console.log('handleCompareType clicked')
+  }
+
   const handleReset = () => {
+    console.log('reset')
+    setTabValue(0)
     setShowForm('block')
     setShowResults('none')
-    setConsumptionAmount('')
+    setinputAmount('')
     setRegionData([])
     setRegion('')
     setCategory('All homes')
-    setEnergyConsumptionPerHousehold(null)
-    setDifferenceInConsumption(null)
+    setClassification(null)
+    setSubclassification(null)
+    setSelection('')
+    setEnergyPerHouseHold(null)
+    setDifference(null)
     setRegionHelperText('Select a region in the U.S')
   }
   
@@ -93,7 +141,7 @@ const App = () => {
     return (consumed - data).toFixed(2)
   }
   
-  // console.log('rendered app')
+  console.log('rendered app')
   
   return (
     <div className="App">
@@ -101,14 +149,24 @@ const App = () => {
         <Container maxWidth="sm">   
           <Typography variant="h1" theme={theme} align="center">How Energy Efficient Are You?</Typography>
           <Box display={showForm}>
+            <FormGroup>
+              <FormControlLabel
+                control={<Switch 
+                  checked={isCompareConsumption}
+                  onChange={handleCompareConsumptionChange}
+                />}
+                label={isCompareConsumption? 'Compare energy consumption in kWh': 'Compare energy expenditure in USD'}
+              />
+            </FormGroup>
+
             <form onSubmit={handleSubmit}>
               <Grid container spacing={5} justifyContent="center" alignItems="center">
 
                 <Grid item xs={12}>
                   <FormControl focused={true} fullWidth={true}>
-                    <InputLabel>Annual energy consumption in kWh: </InputLabel>
-                    <Input value={consumptionAmount} onChange={handleConsumptionAmountChange} type="number" name="annual-energy" id="annual-energy" required/>
-                    <FormHelperText>Get your energy bills from the last 12 months and add up the amount of electricity you consumed.</FormHelperText>
+                    <InputLabel>Annual energy {isCompareConsumption ? 'consumption in kWh: ': 'expenditure in USD'}</InputLabel>
+                    <Input value={inputAmount} onChange={handleinputAmountChange} type="number" name="annual-energy" id="annual-energy" required/>
+                    <FormHelperText>Get your energy bills from the last 12 months and add up the amount of electricity you {isCompareConsumption ? 'consumed' : 'paid for'}.</FormHelperText>
                   </FormControl>
                 </Grid>
 
@@ -134,10 +192,21 @@ const App = () => {
           </Box>
           
           <ResultTabs 
+            inputAmount={inputAmount}
+            isCompareConsumption={isCompareConsumption}
+            selection={selection}
+            handleSelectionChange={handleSelectionChange}
+            tabValue={tabValue}
+            handleTabChange={handleTabChange}
             showResults={showResults} 
             handleReset={handleReset}
-            differenceInConsumption={differenceInConsumption}
-            energyConsumptionPerHouseHold={energyConsumptionPerHouseHold}
+            handleCategoryChange={handleCategoryChange}
+            region={region}
+            category={category}
+            classification={classification}
+            subclassification={subclassification}
+            difference={difference}
+            energyPerHouseHold={energyPerHouseHold}
           />
         </Container>
       </ThemeProvider>

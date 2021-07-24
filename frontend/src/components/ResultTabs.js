@@ -1,5 +1,6 @@
 import React from 'react';
 import AllHomesTabContent from './AllHomesTabContent';
+import CategoryTabContent from './CategoryTabContent';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -49,64 +50,224 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function ResultTabs({showResults, handleReset, differenceInConsumption, energyConsumptionPerHouseHold}) {
+export default function ResultTabs({inputAmount, isCompareConsumption, selection, handleSelectionChange, tabValue, handleTabChange, showResults, handleReset, handleCategoryChange, region, category, classification, subclassification, difference, energyPerHouseHold}) {
   const classes = useStyles();
-  const [value, setValue] = React.useState(0);
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
 
   return (
     <div className={classes.root} style={{display: showResults}}>
       <AppBar position="static" color="default">
         <Tabs
-          value={value}
-          onChange={handleChange}
+          value={tabValue}
+          onChange={handleTabChange}
+          onClick={handleCategoryChange}
           indicatorColor="primary"
           textColor="primary"
           variant="scrollable"
           scrollButtons="auto"
           aria-label="scrollable auto tabs example"
         >
-          <Tab label="All Homes" {...a11yProps(0)} />
-          <Tab label="Item Two" {...a11yProps(1)} />
-          <Tab label="Item Three" {...a11yProps(2)} />
-          <Tab label="Item Four" {...a11yProps(3)} />
-          <Tab label="Item Five" {...a11yProps(4)} />
-          <Tab label="Item Six" {...a11yProps(5)} />
-          <Tab label="Item Seven" {...a11yProps(6)} />
+          <Tab label="All homes" {...a11yProps(0)} />
+          <Tab label="Census division" {...a11yProps(1)} />
+          <Tab label="Census urban/rural classification" {...a11yProps(2)} />
+          <Tab label="Metropolitan or micropolitan statistical area" {...a11yProps(3)} />
+          <Tab label="Climate region" {...a11yProps(4)} />
+          <Tab label="Housing unit type" {...a11yProps(5)} />
+          <Tab label="Ownership of housing unit" {...a11yProps(6)} />
+          <Tab label="Year of construction" {...a11yProps(7)} />
+          <Tab label="Total square footage" {...a11yProps(8)} />
+          <Tab label="Number of household members" {...a11yProps(9)} />
+          <Tab label="Annual household income" {...a11yProps(10)} />
+          <Tab label="Payment method for energy bills" {...a11yProps(11)} />
+          <Tab label="Main heating fuel" {...a11yProps(12)} />
         </Tabs>
       </AppBar>
-      <TabPanel value={value} index={0}>
-        <AllHomesTabContent 
-            differenceInConsumption={differenceInConsumption}
-            energyConsumptionPerHouseHold={energyConsumptionPerHouseHold}
+      <TabPanel value={tabValue} index={0}>
+      <CategoryTabContent 
+          inputAmount={inputAmount}
+          isCompareConsumption={isCompareConsumption}
+          selection={selection}
+          handleSelectionChange={handleSelectionChange}
+          region={region}
+          classification={classification}
+          subclassification={subclassification}
+          difference={difference}
+          energyPerHouseHold={energyPerHouseHold}
+          category={category}
         />
       </TabPanel>
-      <TabPanel value={value} index={1}>
-        Item Two
+      <TabPanel value={tabValue} index={1}>
+        <CategoryTabContent 
+          inputAmount={inputAmount}
+          isCompareConsumption={isCompareConsumption}
+          selection={selection}
+          handleSelectionChange={handleSelectionChange}
+          region={region}
+          classification={classification}
+          subclassification={subclassification}
+          difference={difference}
+          energyPerHouseHold={energyPerHouseHold}
+          category={category}
+        />
       </TabPanel>
-      <TabPanel value={value} index={2}>
-        Item Three
+      <TabPanel value={tabValue} index={2}>
+        <CategoryTabContent 
+          inputAmount={inputAmount}
+          isCompareConsumption={isCompareConsumption}
+          selection={selection}
+          handleSelectionChange={handleSelectionChange}
+          region={region}
+          classification={classification}
+          subclassification={subclassification}
+          difference={difference}
+          energyPerHouseHold={energyPerHouseHold}
+          category={category}
+        />
       </TabPanel>
-      <TabPanel value={value} index={3}>
-        Item Four
+      <TabPanel value={tabValue} index={3}>
+        <CategoryTabContent 
+          inputAmount={inputAmount}
+          isCompareConsumption={isCompareConsumption}
+          selection={selection}
+          handleSelectionChange={handleSelectionChange}
+          region={region}
+          classification={classification}
+          subclassification={subclassification}
+          difference={difference}
+          energyPerHouseHold={energyPerHouseHold}
+          category={category}
+        />
       </TabPanel>
-      <TabPanel value={value} index={4}>
-        Item Five
+      <TabPanel value={tabValue} index={4}>
+        <CategoryTabContent 
+          inputAmount={inputAmount}
+          isCompareConsumption={isCompareConsumption}
+          selection={selection}
+          handleSelectionChange={handleSelectionChange}
+          region={region}
+          classification={classification}
+          subclassification={subclassification}
+          difference={difference}
+          energyPerHouseHold={energyPerHouseHold}
+          category={category}
+        />
       </TabPanel>
-      <TabPanel value={value} index={5}>
-        Item Six
+      <TabPanel value={tabValue} index={5}>
+        <CategoryTabContent 
+          inputAmount={inputAmount}
+          isCompareConsumption={isCompareConsumption}
+          selection={selection}
+          handleSelectionChange={handleSelectionChange}
+          region={region}
+          classification={classification}
+          subclassification={subclassification}
+          difference={difference}
+          energyPerHouseHold={energyPerHouseHold}
+          category={category}
+        />
       </TabPanel>
-      <TabPanel value={value} index={6}>
-        Item Seven
+      <TabPanel value={tabValue} index={6}>
+        <CategoryTabContent 
+          inputAmount={inputAmount}
+          isCompareConsumption={isCompareConsumption}
+          selection={selection}
+          handleSelectionChange={handleSelectionChange}
+          region={region}
+          classification={classification}
+          subclassification={subclassification}
+          difference={difference}
+          energyPerHouseHold={energyPerHouseHold}
+          category={category}
+        />
+      </TabPanel>
+      <TabPanel value={tabValue} index={7}>
+        <CategoryTabContent 
+          inputAmount={inputAmount}
+          isCompareConsumption={isCompareConsumption}
+          selection={selection}
+          handleSelectionChange={handleSelectionChange}
+          region={region}
+          classification={classification}
+          subclassification={subclassification}
+          difference={difference}
+          energyPerHouseHold={energyPerHouseHold}
+          category={category}
+        />
+      </TabPanel>
+      <TabPanel value={tabValue} index={8}>
+        <CategoryTabContent 
+          inputAmount={inputAmount}
+          isCompareConsumption={isCompareConsumption}
+          selection={selection}
+          handleSelectionChange={handleSelectionChange}
+          region={region}
+          classification={classification}
+          subclassification={subclassification}
+          difference={difference}
+          energyPerHouseHold={energyPerHouseHold}
+          category={category}
+        />
+      </TabPanel>
+      <TabPanel value={tabValue} index={9}>
+        <CategoryTabContent 
+          inputAmount={inputAmount}
+          isCompareConsumption={isCompareConsumption}
+          selection={selection}
+          handleSelectionChange={handleSelectionChange}
+          region={region}
+          classification={classification}
+          subclassification={subclassification}
+          difference={difference}
+          energyPerHouseHold={energyPerHouseHold}
+          category={category}
+        />
+      </TabPanel>
+      <TabPanel value={tabValue} index={10}>
+        <CategoryTabContent 
+          inputAmount={inputAmount}
+          isCompareConsumption={isCompareConsumption}
+          selection={selection}
+          handleSelectionChange={handleSelectionChange}
+          region={region}
+          classification={classification}
+          subclassification={subclassification}
+          difference={difference}
+          energyPerHouseHold={energyPerHouseHold}
+          category={category}
+        />
+      </TabPanel>
+      <TabPanel value={tabValue} index={11}>
+        <CategoryTabContent 
+          inputAmount={inputAmount}
+          isCompareConsumption={isCompareConsumption}
+          selection={selection}
+          handleSelectionChange={handleSelectionChange}
+          region={region}
+          classification={classification}
+          subclassification={subclassification}
+          difference={difference}
+          energyPerHouseHold={energyPerHouseHold}
+          category={category}
+        />
+      </TabPanel>
+      <TabPanel value={tabValue} index={12}>
+        <CategoryTabContent 
+          inputAmount={inputAmount}
+          isCompareConsumption={isCompareConsumption}
+          selection={selection}
+          handleSelectionChange={handleSelectionChange}
+          region={region}
+          classification={classification}
+          subclassification={subclassification}
+          difference={difference}
+          energyPerHouseHold={energyPerHouseHold}
+          category={category}
+        />
       </TabPanel>
       <Box m={2}>
-                <Button onClick={handleReset} variant="outlined">
-                    Go Back
-                </Button>
-        </Box>
+        <Button onClick={handleReset} variant="outlined">
+            Go Back
+        </Button>
+      </Box>
     </div>
   );
 }

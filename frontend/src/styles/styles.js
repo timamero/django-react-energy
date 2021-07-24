@@ -22,6 +22,9 @@ export const useStyles = makeStyles({
     greenText: {
       color: 'green'
     },
+    marginLeft: {
+      marginLeft: 24
+    }
   })
 
 // Style for the displayed calculated difference in consumption/expenditure
@@ -30,4 +33,6 @@ export const numberStyle = {
     fontSize: '1.2rem'
 }
 
-// export default { useStyles, numberStyle }
+export const resultsContainer = {
+  minHeight: '50vh',
+}
