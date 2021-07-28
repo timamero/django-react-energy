@@ -1,0 +1,5 @@
+Reference: https://help.heroku.com/KTXB2SJT/how-do-i-copy-a-csv-file-into-a-postgres-table
+
+Run
+    heroku pg:psql -a fc-energy
+    DATABASE=> \copy energyapi_energydata FROM C:\Users\fcame\DevProjects\DjangoReact\energyEfficiencyComparison-v2\backend\data\1-processed\ce_combined_converted.csv CSV HEADER;

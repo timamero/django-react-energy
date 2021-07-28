@@ -6,6 +6,7 @@ import theme from './theme/theme'
 import { useStyles } from './styles/styles'
 
 import { ThemeProvider } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container'
@@ -74,7 +75,7 @@ const App = () => {
       }   
     }
   
-  }, [regionData, category, inputAmount, tabValue, selection])
+  }, [regionData, category, inputAmount, tabValue, selection, isCompareConsumption])
 
   const handleinputAmountChange = (event) => {
     setinputAmount(event.target.value)
@@ -140,40 +141,59 @@ const App = () => {
   function calculateDifference(consumed, data) {
     return (consumed - data).toFixed(2)
   }
+
+  const TypeSwitch = withStyles({
+    switchBase: {
+      color: '#B5F3BC',
+    },
+    checked: {},
+    track: {
+      border: '1px solid #7B947E',
+      borderRadius: 16 / 2,
+      opacity: 1,
+      backgroundColor: '#2FDE43',
+    },
+  })(Switch);
   
   console.log('rendered app')
   
   return (
     <div className="App">
       <ThemeProvider theme={theme}>
-        <Container maxWidth="sm">   
+        <Container maxWidth="md">
+          
           <Typography variant="h1" theme={theme} align="center">How Energy Efficient Are You?</Typography>
+          
           <Box display={showForm}>
-            <FormGroup>
-              <FormControlLabel
-                control={<Switch 
-                  checked={isCompareConsumption}
-                  onChange={handleCompareConsumptionChange}
-                />}
-                label={isCompareConsumption? 'Compare energy consumption in kWh': 'Compare energy expenditure in USD'}
-              />
-            </FormGroup>
-
+          <Box style={{maxWidth: "500px", marginLeft: "auto", marginRight: "auto"}}> 
+              <FormGroup>
+                <FormControlLabel
+                  control={<TypeSwitch 
+                    checked={isCompareConsumption}
+                    onChange={handleCompareConsumptionChange}
+                    colorSecondary="#000000"
+                  />}
+                  label={isCompareConsumption? 'Compare energy consumption in kWh': 'Compare energy expenditure in USD'}
+                />
+              </FormGroup>
+            </Box> 
             <form onSubmit={handleSubmit}>
               <Grid container spacing={5} justifyContent="center" alignItems="center">
 
                 <Grid item xs={12}>
+                <Box style={{maxWidth: "500px", marginLeft: "auto", marginRight: "auto"}}>
                   <FormControl focused={true} fullWidth={true}>
                     <InputLabel>Annual energy {isCompareConsumption ? 'consumption in kWh: ': 'expenditure in USD'}</InputLabel>
                     <Input value={inputAmount} onChange={handleinputAmountChange} type="number" name="annual-energy" id="annual-energy" required/>
                     <FormHelperText>Get your energy bills from the last 12 months and add up the amount of electricity you {isCompareConsumption ? 'consumed' : 'paid for'}.</FormHelperText>
                   </FormControl>
+                  </Box>
                 </Grid>
 
                 <Grid item xs={12}>
                   <FormControl component="fieldset" className={classes.alignItemsAndJustifyContent}>
                         <FormLabel component="legend" className={classes.centerText}>Region</FormLabel>
-                        <RadioGroup aria-label="region" name="region" value={region} onChange={handleRegionChange} style={{margin: "auto"}} row required>
+                        <RadioGroup aria-label="region" name="region" value={region} onChange={handleRegionChange} style={{margin: "auto"}} required>
                           <FormControlLabel value="Northeast" control={<Radio required={true}/>} label="Northeast" />
                           <FormControlLabel value="Midwest" control={<Radio required={true}/>} label="Midwest" />
                           <FormControlLabel value="South" control={<Radio required={true}/>} label="South" />
@@ -208,6 +228,14 @@ const App = () => {
             difference={difference}
             energyPerHouseHold={energyPerHouseHold}
           />
+
+        <Box>
+          <footer>
+            <Typography variant="body2" style={{textAlign:"center"}} >
+              The data used to compare energy consumption and expenditure is from the <a href="https://www.eia.gov/consumption/residential/data/2015/index.php?view=consumption#summary" target="_blank" rel="noreferrer">Residential Energy Consumption Survey</a>.
+            </Typography>
+          </footer>
+        </Box>
         </Container>
       </ThemeProvider>
     </div>

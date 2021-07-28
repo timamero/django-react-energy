@@ -3,7 +3,7 @@ import { useStyles, numberStyle, resultsContainer } from '../styles/styles'
 import theme from '../theme/theme'
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import { FormControl, RadioGroup, Radio, FormControlLabel, StylesProvider } from '@material-ui/core';
+import { FormControl, RadioGroup, Radio, FormControlLabel } from '@material-ui/core';
 
 const CategoryTabContent = ({inputAmount, isCompareConsumption, selection, handleSelectionChange, region, classification, subclassification, difference, energyPerHouseHold, category}) => {
     const classes = useStyles();

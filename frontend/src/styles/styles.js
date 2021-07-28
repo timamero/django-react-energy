@@ -17,10 +17,10 @@ export const useStyles = makeStyles({
       justifyContent: 'center',
     },
     redText: {
-      color: 'red'
+      color: '#DE2F2F'
     },
     greenText: {
-      color: 'green'
+      color: '#148021'
     },
     marginLeft: {
       marginLeft: 24

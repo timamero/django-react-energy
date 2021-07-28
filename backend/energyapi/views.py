@@ -13,6 +13,7 @@ class EnergyDataList(generics.ListAPIView):
     """
     List all energy data
     """
+    queryset = EnergyData.objects.all()
     def get(self, request, format=None):
         energy_data = EnergyData.objects.all()
         serializer = EnergyDataSerializer(energy_data, many=True)
