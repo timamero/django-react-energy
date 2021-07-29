@@ -6,3 +6,6 @@ secrets.py
 
 # React
 node_modules/
+
+# VSCode
+.vscode/
