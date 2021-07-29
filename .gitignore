@@ -10,3 +10,7 @@ node_modules/
 
 # VSCode
 .vscode/
+
+# Lint
+.eslintrc.js
+.eslintignore
