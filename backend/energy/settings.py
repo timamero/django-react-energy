@@ -41,7 +41,7 @@ else:
     DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
 
-ALLOWED_HOSTS = ['fc-energy.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['fc-energy.herokuapp.com','127.0.0.1', 'http://localhost:5000' , 'http://localhost:3000']
 
 
 # Application definition

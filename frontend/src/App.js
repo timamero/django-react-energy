@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import './App.css'
+// import axios from 'axios'
 import getByRegion from './services/data'
 import ResultTabs from './components/ResultTabs'
 import theme from './theme/theme'
@@ -99,6 +100,8 @@ const App = () => {
     const regionValue = event.target.elements.region.value
 
     getByRegion(regionValue).then(energyData => {
+    // axios.get(`http://127.0.0.1:8000/energydata/${regionValue}`).then(response => {
+      console.log('got region data')
       setRegionData(energyData)
       setShowForm('none')
       setShowResults('block')
