@@ -1,5 +1,5 @@
 // Material-UI Theme customization
-import { createTheme } from "@material-ui/core";
+import { createTheme } from '@material-ui/core'
 
 const theme = createTheme({
   spacing: 4,
@@ -24,17 +24,17 @@ const theme = createTheme({
     ].join(','),
     h1: {
       fontSize: 30,
-      padding: "16px",
+      padding: '16px',
     },
     h2: {
       fontSize: 20,
-      padding: "16px",
+      padding: '16px',
     },
     body2: {
       fontSize: 12,
-      paddingTop: "40px"
+      paddingTop: '40px'
     }
   },
-});
+})
 
-export default theme;
+export default theme

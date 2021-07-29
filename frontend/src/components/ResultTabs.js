@@ -1,15 +1,15 @@
-import React from 'react';
-import CategoryTabContent from './CategoryTabContent';
-import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
-import Box from '@material-ui/core/Box';
-import Button from '@material-ui/core/Button';
+import React from 'react'
+import CategoryTabContent from './CategoryTabContent'
+import PropTypes from 'prop-types'
+import { makeStyles } from '@material-ui/core/styles'
+import AppBar from '@material-ui/core/AppBar'
+import Tabs from '@material-ui/core/Tabs'
+import Tab from '@material-ui/core/Tab'
+import Box from '@material-ui/core/Box'
+import Button from '@material-ui/core/Button'
 
 function TabPanel(props) {
-  const { children, value, index, ...other } = props;
+  const { children, value, index, ...other } = props
 
   return (
     <div
@@ -25,20 +25,20 @@ function TabPanel(props) {
         </Box>
       )}
     </div>
-  );
+  )
 }
 
 TabPanel.propTypes = {
   children: PropTypes.node,
   index: PropTypes.any.isRequired,
   value: PropTypes.any.isRequired,
-};
+}
 
 function a11yProps(index) {
   return {
     id: `scrollable-auto-tab-${index}`,
     'aria-controls': `scrollable-auto-tabpanel-${index}`,
-  };
+  }
 }
 
 const useStyles = makeStyles((theme) => ({
@@ -47,10 +47,10 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     backgroundColor: theme.palette.background.paper,
   },
-}));
+}))
 
 export default function ResultTabs({inputAmount, isCompareConsumption, selection, handleSelectionChange, tabValue, handleTabChange, showResults, handleReset, handleCategoryChange, region, category, classification, subclassification, difference, energyPerHouseHold}) {
-  const classes = useStyles();
+  const classes = useStyles()
 
   return (
     <div className={classes.root} style={{display: showResults}}>
@@ -81,7 +81,7 @@ export default function ResultTabs({inputAmount, isCompareConsumption, selection
         </Tabs>
       </AppBar>
       <TabPanel value={tabValue} index={0}>
-      <CategoryTabContent 
+        <CategoryTabContent 
           inputAmount={inputAmount}
           isCompareConsumption={isCompareConsumption}
           selection={selection}
@@ -268,5 +268,5 @@ export default function ResultTabs({inputAmount, isCompareConsumption, selection
         </Button>
       </Box>
     </div>
-  );
+  )
 }

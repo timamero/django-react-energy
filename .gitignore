@@ -5,6 +5,7 @@ secrets.py
 .zip
 
 # React
+build/
 node_modules/
 
 # VSCode

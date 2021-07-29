@@ -1,36 +1,36 @@
 // Material-UI Styles
-import { makeStyles } from "@material-ui/core";
+import { makeStyles } from '@material-ui/core'
 
 export const useStyles = makeStyles({
-    centerText: {
-      textAlign: 'center'
-    },
-    alignItemsAndJustifyContent: {
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
-    alignItemsAndJustifyContentCol: {
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
-    redText: {
-      color: '#DE2F2F'
-    },
-    greenText: {
-      color: '#148021'
-    },
-    marginLeft: {
-      marginLeft: 24
-    }
-  })
+  centerText: {
+    textAlign: 'center'
+  },
+  alignItemsAndJustifyContent: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  alignItemsAndJustifyContentCol: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  redText: {
+    color: '#DE2F2F'
+  },
+  greenText: {
+    color: '#148021'
+  },
+  marginLeft: {
+    marginLeft: 24
+  }
+})
 
 // Style for the displayed calculated difference in consumption/expenditure
 export const numberStyle = {
-    fontWeight: 600,
-    fontSize: '1.2rem'
+  fontWeight: 600,
+  fontSize: '1.2rem'
 }
 
 export const resultsContainer = {
