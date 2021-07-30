@@ -41,7 +41,7 @@ function a11yProps(index) {
   }
 }
 
-const useStyles = makeStyles((theme) => ({
+const useTabStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     width: '100%',
@@ -49,8 +49,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-export default function ResultTabs({inputAmount, isCompareConsumption, selection, handleSelectionChange, tabValue, handleTabChange, showResults, handleReset, handleCategoryChange, region, category, classification, subclassification, difference, energyPerHouseHold}) {
-  const classes = useStyles()
+export default function ResultTabs({useStyles, inputAmount, isCompareConsumption, selection, handleSelectionChange, tabValue, handleTabChange, showResults, handleReset, handleCategoryChange, region, category, classification, subclassification, difference, energyPerHouseHold}) {
+  const classes = useTabStyles()
 
   return (
     <div className={classes.root} style={{display: showResults}}>
@@ -75,13 +75,14 @@ export default function ResultTabs({inputAmount, isCompareConsumption, selection
           <Tab label="Year of construction" {...a11yProps(7)} />
           <Tab label="Total square footage" {...a11yProps(8)} />
           <Tab label="Number of household members" {...a11yProps(9)} />
-          <Tab label="Annual household income" {...a11yProps(10)} />
+          <Tab label="2015 annual household income" {...a11yProps(10)} />
           <Tab label="Payment method for energy bills" {...a11yProps(11)} />
           <Tab label="Main heating fuel" {...a11yProps(12)} />
         </Tabs>
       </AppBar>
       <TabPanel value={tabValue} index={0}>
         <CategoryTabContent 
+          useStyles={useStyles}
           inputAmount={inputAmount}
           isCompareConsumption={isCompareConsumption}
           selection={selection}
@@ -96,6 +97,7 @@ export default function ResultTabs({inputAmount, isCompareConsumption, selection
       </TabPanel>
       <TabPanel value={tabValue} index={1}>
         <CategoryTabContent 
+          useStyles={useStyles}
           inputAmount={inputAmount}
           isCompareConsumption={isCompareConsumption}
           selection={selection}
@@ -110,6 +112,7 @@ export default function ResultTabs({inputAmount, isCompareConsumption, selection
       </TabPanel>
       <TabPanel value={tabValue} index={2}>
         <CategoryTabContent 
+          useStyles={useStyles}
           inputAmount={inputAmount}
           isCompareConsumption={isCompareConsumption}
           selection={selection}
@@ -124,6 +127,7 @@ export default function ResultTabs({inputAmount, isCompareConsumption, selection
       </TabPanel>
       <TabPanel value={tabValue} index={3}>
         <CategoryTabContent 
+          useStyles={useStyles}
           inputAmount={inputAmount}
           isCompareConsumption={isCompareConsumption}
           selection={selection}
@@ -138,6 +142,7 @@ export default function ResultTabs({inputAmount, isCompareConsumption, selection
       </TabPanel>
       <TabPanel value={tabValue} index={4}>
         <CategoryTabContent 
+          useStyles={useStyles}
           inputAmount={inputAmount}
           isCompareConsumption={isCompareConsumption}
           selection={selection}
@@ -152,6 +157,7 @@ export default function ResultTabs({inputAmount, isCompareConsumption, selection
       </TabPanel>
       <TabPanel value={tabValue} index={5}>
         <CategoryTabContent 
+          useStyles={useStyles}
           inputAmount={inputAmount}
           isCompareConsumption={isCompareConsumption}
           selection={selection}
@@ -166,6 +172,7 @@ export default function ResultTabs({inputAmount, isCompareConsumption, selection
       </TabPanel>
       <TabPanel value={tabValue} index={6}>
         <CategoryTabContent 
+          useStyles={useStyles}
           inputAmount={inputAmount}
           isCompareConsumption={isCompareConsumption}
           selection={selection}
@@ -180,6 +187,7 @@ export default function ResultTabs({inputAmount, isCompareConsumption, selection
       </TabPanel>
       <TabPanel value={tabValue} index={7}>
         <CategoryTabContent 
+          useStyles={useStyles}
           inputAmount={inputAmount}
           isCompareConsumption={isCompareConsumption}
           selection={selection}
@@ -194,6 +202,7 @@ export default function ResultTabs({inputAmount, isCompareConsumption, selection
       </TabPanel>
       <TabPanel value={tabValue} index={8}>
         <CategoryTabContent 
+          useStyles={useStyles}
           inputAmount={inputAmount}
           isCompareConsumption={isCompareConsumption}
           selection={selection}
@@ -208,6 +217,7 @@ export default function ResultTabs({inputAmount, isCompareConsumption, selection
       </TabPanel>
       <TabPanel value={tabValue} index={9}>
         <CategoryTabContent 
+          useStyles={useStyles}
           inputAmount={inputAmount}
           isCompareConsumption={isCompareConsumption}
           selection={selection}
@@ -222,6 +232,7 @@ export default function ResultTabs({inputAmount, isCompareConsumption, selection
       </TabPanel>
       <TabPanel value={tabValue} index={10}>
         <CategoryTabContent 
+          useStyles={useStyles}
           inputAmount={inputAmount}
           isCompareConsumption={isCompareConsumption}
           selection={selection}
@@ -236,6 +247,7 @@ export default function ResultTabs({inputAmount, isCompareConsumption, selection
       </TabPanel>
       <TabPanel value={tabValue} index={11}>
         <CategoryTabContent 
+          useStyles={useStyles}
           inputAmount={inputAmount}
           isCompareConsumption={isCompareConsumption}
           selection={selection}
@@ -250,6 +262,7 @@ export default function ResultTabs({inputAmount, isCompareConsumption, selection
       </TabPanel>
       <TabPanel value={tabValue} index={12}>
         <CategoryTabContent 
+          useStyles={useStyles}
           inputAmount={inputAmount}
           isCompareConsumption={isCompareConsumption}
           selection={selection}
