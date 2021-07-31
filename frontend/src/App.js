@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react'
 import './App.css'
-// import axios from 'axios'
 import getByRegion from './services/data'
 import ResultTabs from './components/ResultTabs'
 import theme from './theme/theme'
@@ -14,6 +13,7 @@ import Grid from '@material-ui/core/Grid'
 import Button from '@material-ui/core/Button'
 import { FormControl, FormLabel, FormGroup, InputLabel, Input, RadioGroup, Radio, FormControlLabel, FormHelperText } from '@material-ui/core'
 import Switch from '@material-ui/core/Switch'
+import FlashOnIcon from '@material-ui/icons/FlashOn'
 
 const useStyles = makeStyles({
   centerText: {
@@ -42,8 +42,39 @@ const useStyles = makeStyles({
   centerContainer: {
     margin: 'auto',
     width: '500px'
+  },
+  fullViewContainer: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    height: '100vh',
+    width: '100vw',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'white',
+    zIndex: 3
+  },
+  loadingAnimation: {
+    animation: 'loader 1s ease infinite'
+  }
+  ,
+  loadingAnimation2: {
+    animation: 'loader 2.5s ease infinite'
+  }
+  ,
+  loadingAnimation3: {
+    animation: 'loader 5s ease infinite'
   }
 })
+
+// const css = window.document.styleSheets[0]
+// css.insertRule(`
+// @keyframes loader {
+//   0%   { opacity: 0;     }
+//   50%  { opacity: 0.5; }
+//   100% { opacity: 1%; }
+// }`, css.cssRules.length)
 
 const App = () => {
   const classes = useStyles()
@@ -53,6 +84,7 @@ const App = () => {
 
   const [showForm, setShowForm] = useState('block')
   const [showResults, setShowResults] = useState('none')
+  const [loading, setLoading] = useState(false)
   
   const [region, setRegion] = useState('')
   const [regionHelperText, setRegionHelperText] = useState('Select a region in the U.S')
@@ -126,11 +158,12 @@ const App = () => {
   const handleSubmit = (event) => {
     event.preventDefault()
     const regionValue = event.target.elements.region.value
-
+    setLoading(true)
     getByRegion(regionValue).then(energyData => {
       setRegionData(energyData)
       setShowForm('none')
       setShowResults('block')
+      setLoading(false)
     })
   }
 
@@ -247,7 +280,16 @@ const App = () => {
               </Grid>
             </form>    
           </Box>
-          
+          {loading 
+            ? (
+              <Box className={classes.fullViewContainer}>
+                <FlashOnIcon className={classes.loadingAnimation} />
+                <FlashOnIcon className={classes.loadingAnimation2} />
+                <FlashOnIcon className={classes.loadingAnimation3} />
+                <Typography>Loading</Typography>
+              </Box> 
+            )
+            : null }
           <ResultTabs 
             useStyles={useStyles}
             inputAmount={inputAmount}
