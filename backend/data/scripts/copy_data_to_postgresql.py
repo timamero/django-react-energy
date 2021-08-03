@@ -1,23 +1,20 @@
 """
 Running this script will transfer data from ce_combined_converted.csv to PostgreSQL database table
+CONFIGURE ENVIRONMENT VARIABLES IN backend/energy/.env
 """
 # Reference: https://www.dataquest.io/blog/loading-data-into-postgres/
 import psycopg2
+import os
+from dotenv import load_dotenv
+load_dotenv('../../energy/.env')
 
-import sys
-# UPDATE THE PATH TO YOUR LOCAL PATH TO THIS FILE
-sys.path.append(r"C:\Users\fcame\DevProjects\DjangoReact\energyEfficiencyComparison-v2\backend\data\scripts")
-
-# COMMENT THIS LINE OUT
-from secrets import *
-
-# REPLACE THE DATABASE PARAMETERS BELOW WITH YOUR DATABASE PARAMETERS
 # Connect to energy database
 conn = psycopg2.connect(
     host="localhost",
-    dbname=DB_NAME,
-    user=DB_USER,
-    password=DB_PASSWORD)
+    dbname=os.environ.get('DB_NAME'),
+    user=os.environ.get('DB_USER'),
+    password=os.environ.get('DB_PASSWORD')
+)
 
 # Create Cursor object
 cur = conn.cursor()
